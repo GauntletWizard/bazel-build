@@ -1,7 +1,10 @@
 FROM ubuntu:16.04
 MAINTAINER Cameron <chenkan@gs-robot.com>
 
-ADD install_scripts.tar.gz /root/
+ADD pre_install.sh /root/
+ADD install_java.sh /root/
+ADD install_bazel.sh /root/
+ADD install_python.sh /root/
 
 # install bazel and it's dependencies
 RUN cd /root \
