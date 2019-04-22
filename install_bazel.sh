@@ -11,6 +11,3 @@ curl https://bazel.build/bazel-release.pub.gpg | apt-key add -
 apt-get update
 apt-get install -y bazel
 rm -rf /var/lib/apt/lists/*
-
-# run bazel to avoid "Extracting Bazel installation..."
-bazel
