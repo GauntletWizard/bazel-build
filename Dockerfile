@@ -1,7 +1,7 @@
 FROM ubuntu:18.04
 MAINTAINER Ted Hahn <thahn@tcbtech.com>
 
-# Invocation: docker build . -t gauntletwizard/bazel-go:bazel
+# Invocation: docker build --squash . -t gauntletwizard/bazel-go:bazel
 
 # install bazel and it's dependencies
 ADD pre_install.sh /root/
@@ -23,6 +23,9 @@ ADD install_kubectl.sh /root/
 RUN cd /root && ./install_kubectl.sh && rm install_kubectl.sh
 
 RUN apt-get install -y docker.io
+
+ADD post_install.sh /root/
+RUN cd /root && ./post_install.sh && rm post_install.sh
 
 ENV JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
 
