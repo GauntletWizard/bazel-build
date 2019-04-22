@@ -1,5 +1,5 @@
 FROM ubuntu:18.04
-MAINTAINER Cameron <chenkan@gs-robot.com>
+MAINTAINER Ted Hahn <thahn@tcbtech.com>
 
 ADD pre_install.sh /root/
 ADD install_java.sh /root/
