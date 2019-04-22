@@ -29,6 +29,5 @@ RUN cd /root && ./post_install.sh && rm post_install.sh
 
 ENV JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
 
-WORKDIR /root
-
-CMD ["/bin/bash"]
+WORKDIR /home/bazel
+USER bazel
