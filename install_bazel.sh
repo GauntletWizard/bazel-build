@@ -10,3 +10,8 @@ curl https://bazel.build/bazel-release.pub.gpg | apt-key add -
 
 apt-get update
 apt-get install -y bazel
+
+# install buildifier
+# go install github.com/bazelbuild/buildtools/buildifier
+curl https://github.com/bazelbuild/buildtools/releases/download/0.22.0/buildifier -Lo /bin/buildifier
+chmod a+x /bin/buildifier
